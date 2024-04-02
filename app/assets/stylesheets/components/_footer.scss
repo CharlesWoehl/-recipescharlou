@@ -1,0 +1,24 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 42px;
+  border-top:0.2px solid #333;
+  padding: 20px;
+}
+.footer-link {
+  font-size:16px;
+  font-weight: 100;
+  color: #333;
+  line-height: 21px;
+  font-family: "Work Sans", sans-serif;
+
+  a {
+    text-decoration: none;
+     padding: 0 5px;
+
+  }
+  a:hover {
+     color: #000;
+     }
+ }

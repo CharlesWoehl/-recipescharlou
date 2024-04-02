@@ -1,0 +1,36 @@
+<div class="container-fluid pe-0">
+  <div class="row">
+    <div class="col-lg-7 col-sm-12 bg-white d-flex flex-column justify-content-center">
+      <p class="title-show-recipe"><%= @recipe.name %></p>
+      <p class="resume-short-show-recipe"><%= @recipe.description %></p>
+      <p class="resume-short-show-recipe">
+
+</p>
+    </div>
+    <div class="col-lg-5 col-sm-12 p-0">
+      <div class="photo-show-recipe">
+        <%= cl_image_tag @recipe.photo.key %>
+      </div>
+    </div>
+      <div class="recipe-show-recipe p-4">
+        <%= @recipe.recipe.html_safe %>
+      </div>
+  </div>
+</div>
+<%# previous & next %>
+<!--
+<% if @previous_recipe || @next_recipe %>
+  <div class="next-prev-container">
+    <div class="col-6 d-flex justify-content-start align-items-center ps-5">
+      <% if @previous_recipe %>
+        <%= link_to "<< Recette précédente", recipe_path(@previous_recipe), class: "link-read-more" %>
+      <% end %>
+    </div>
+    <div class="col-6 d-flex justify-content-end align-items-center pe-5">
+      <% if @next_recipe %>
+        <%= link_to "Recette suivante >>", recipe_path(@next_recipe), class: "link-read-more" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+-->

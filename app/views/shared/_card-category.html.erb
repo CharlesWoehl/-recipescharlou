@@ -1,0 +1,16 @@
+<div class="row mt-3">
+  <% @recipes.each do |recipe| %>
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 title-category-list mt-3">
+      <%= link_to recipe_path(recipe) do %>
+      <div class="photo-category-recipe">
+        <%= cl_image_tag recipe.photo.key, class: "card-img-top" %>
+      </div>
+      <% end %>
+      <div class="details-category-recipe p-4">
+        <div class="title-category-recipe"><%= recipe.name %></div>
+        <div class="description-card-category"><%= recipe.description %></div>
+        <div class="link-read-more"><%= link_to 'voir la recette', recipe_path(recipe) %></div>
+      </div>
+    </div>
+  <% end %>
+</div>

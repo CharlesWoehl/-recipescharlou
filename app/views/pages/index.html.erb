@@ -1,0 +1,15 @@
+ <div class="container mt-5">
+  <div class="row">
+<div class="col-md-3 title-category-list mb-5">L'index des recettes</div>
+    <% @recipes_by_letter.each do |letter, recipes| %>
+      <div class="col-md-3">
+        <h1><%= letter %></h1>
+        <ul class="list-unstyled">
+          <% recipes.each do |recipe| %>
+            <div class="link-read-more"><%= link_to recipe.name, recipe_path(recipe) %></div>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

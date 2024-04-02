@@ -1,0 +1,76 @@
+.title-show-recipe {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #1e1e1e;
+  font-size: 65px;
+  line-height: 78px;
+  letter-spacing: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.resume-short-show-recipe {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  font-family: Quicksand, sans-serif;
+  margin-top: 10px;
+  text-align: center;
+}
+.photo-show-recipe img {
+  width: 100%;
+  height: 600px;
+  display: block;
+  object-fit: cover;
+}
+.recipe-show-recipe {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+.recipe-show-recipe img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.recipe-show-recipe h2 {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: 300;
+  line-height: 36px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+// next / prev
+
+.next-prev-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  // border: 1px solid #333;
+  height: 42px;
+}
+
+.next-prev-container a {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #1e1e1e;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+   text-align: right;
+  text-decoration: none; /* Supprime le soulignement par défaut */
+}
+.next-prev-container a:hover {
+  text-decoration: underline;
+}

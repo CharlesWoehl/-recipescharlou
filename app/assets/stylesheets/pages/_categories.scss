@@ -1,0 +1,166 @@
+.title-category-list {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #1e1e1e;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+.pic-card-category {
+  position: relative; /* Permet de positionner le pseudo-élément par rapport à ce conteneur */
+  overflow: hidden; /* Cache le dépassement du pseudo-élément */
+}
+
+.pic-card-category::before {
+  content: ''; /* Contenu du pseudo-élément */
+  position: absolute; /* Position absolue par rapport au conteneur parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Dégradé linéaire noir */
+  transition: opacity 0.3s ease; /* Transition de l'opacité */
+  pointer-events: none; /* Permet aux événements de pointer à travers le pseudo-élément */
+}
+
+.pic-card-category img {
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 450px;
+}
+
+.pic-card-category:hover::before {
+  opacity: 0; /* Opacité du pseudo-élément à 0 au survol */
+}
+.title-card-category {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.description-card-category {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  font-family: Quicksand, sans-serif;
+  margin-top: 10px;
+}
+
+
+// SHOW
+
+.title-category-show {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #1e1e1e;
+  font-size: 65px;
+  line-height: 78px;
+  letter-spacing: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.description-title-category {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  font-family: Quicksand, sans-serif;
+  margin-top: 10px;
+}
+
+.p-40 {
+  padding-top: 40px;
+}
+
+.pic-category-show {
+  width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100vw auto; /* Taille de l'image basée sur 100% de la largeur de la fenêtre */
+  height: 250px;
+  margin-top: 10px;
+}
+
+// listing recettes
+
+.photo-category-recipe {
+  position: relative; /* Permet de positionner le pseudo-élément par rapport à ce conteneur */
+  overflow: hidden; /* Cache le dépassement du pseudo-élément */
+}
+
+.photo-category-recipe::before {
+  content: ''; /* Contenu du pseudo-élément */
+  position: absolute; /* Position absolue par rapport au conteneur parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); /* Dégradé linéaire noir */
+  transition: opacity 0.3s ease; /* Transition de l'opacité */
+  pointer-events: none; /* Permet aux événements de pointer à travers le pseudo-élément */
+}
+
+.photo-category-recipe:hover::before {
+  opacity: 0; /* Opacité du pseudo-élément à 0 au survol */
+}
+
+.photo-category-recipe img {
+  width: 100%;
+  height: 450px;
+  display: block;
+  object-fit: cover;
+}
+.details-category-recipe {
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: center;
+}
+.title-category-recipe {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #1e1e1e;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+  overflow: hidden; /* Cache le texte qui dépasse */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  text-overflow: ellipsis; /* Ajoute des points de suspension (...) si le texte dépasse */
+}
+
+.link-read-more a {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #1e1e1e;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  text-align: right;
+  text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+.link-read-more a:hover {
+  text-decoration: underline; /* Ajoute un soulignement au survol */
+}

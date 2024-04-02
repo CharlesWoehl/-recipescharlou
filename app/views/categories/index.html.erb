@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 title-category-list">Trouvez votre recette par catégorie</div>
+    <% @categories.each do |cat| %>
+      <div class="col-md-3 col-sm-6 mb-5">
+        <%= link_to category_path(cat) do %>
+          <div class="pic-card-category">
+            <% if cat.photo.present? %>
+              <%= cl_image_tag cat.photo.key, class: "card-img-top" %>
+            <% else %>
+              <img src="https://library.elementor.com/food-blog-flexbox/wp-content/uploads/sites/232/2022/02/how2_Post_ft_image3.jpg" class="card-img-top" alt="...">
+            <% end %>
+          </div>
+        <% end %>
+          <div class="title-card-category">
+            <%= cat.name %>
+          </div>
+          <div class="description-card-category">
+            <%= cat.description %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
