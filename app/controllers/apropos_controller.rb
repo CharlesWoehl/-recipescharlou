@@ -1,0 +1,2 @@
+class AproposController < ApplicationController
+end
