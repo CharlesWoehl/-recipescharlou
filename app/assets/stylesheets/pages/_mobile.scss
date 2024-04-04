@@ -1,0 +1,18 @@
+// ecran mobile < 992px
+@media (max-width: 991px) {
+  .nav-link {
+    margin-left: 0;
+  }
+  .title-card-category {
+    font-size: 20px;
+  }
+  .title-category-list {
+    font-size: 20px;
+  }
+  .title-show-recipe {
+    font-size: 40px;
+  }
+  .title-category-show {
+    font-size: 45px;
+  }
+}
