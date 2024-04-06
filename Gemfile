@@ -53,6 +53,7 @@ gem "cloudinary"
 gem 'trestle'
 gem 'trestle-tinymce'
 gem "devise"
+gem 'trestle-auth'
 group :development, :test do
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

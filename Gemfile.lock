@@ -298,6 +298,9 @@ GEM
       kaminari (>= 1.1.0)
       railties (>= 4.2.0)
       sprockets-rails (>= 2.0.0)
+    trestle-auth (0.4.4)
+      bcrypt (~> 3.1.7)
+      trestle (~> 0.9.0, >= 0.9.3)
     trestle-tinymce (0.3.1)
       tinymce-rails (~> 5.1)
       trestle (~> 0.9.0)
@@ -351,6 +354,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   trestle
+  trestle-auth
   trestle-tinymce
   turbo-rails
   tzinfo-data
