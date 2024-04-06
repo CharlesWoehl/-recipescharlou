@@ -9,7 +9,9 @@
     </div>
     <div class="col-lg-5 col-sm-12 p-0">
       <div class="photo-show-recipe">
+        <% if @recipe.photo.present? %>
         <%= cl_image_tag @recipe.photo.key %>
+        <% end %>
       </div>
     </div>
       <div class="recipe-show-recipe p-4">
