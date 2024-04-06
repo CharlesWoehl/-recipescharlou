@@ -15,8 +15,7 @@ Trestle.resource(:categories) do
   form do |category|
     text_field :name
     text_area :description
-    file_field :photo
-  end
+   end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
@@ -26,6 +25,6 @@ Trestle.resource(:categories) do
   #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
   #
   params do |params|
-    params.require(:category).permit(:name, :description, :photo)
+    params.require(:category).permit(:name, :description)
   end
 end
