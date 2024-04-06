@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "pages#home"
   get "index", to: "pages#index"
   get "recherche", to: "pages#recherche"
@@ -7,10 +6,13 @@ Rails.application.routes.draw do
   resources :categories
   resources :recipes
   get '/random', to: 'recipes#random'
-   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  # Redirection pour la création de compte
+  constraints ->(request) { request.path.exclude?('users') } do
+    root to: "pages#home" # Redirection vers la page d'accueil pour les requêtes de création de compte
+  end
+
+
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
