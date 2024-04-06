@@ -17,3 +17,12 @@ h1 {
 .h100vh {
   min-height:calc(100vh - 140px);
 }
+
+a {
+  color: #0C4376;
+  text-decoration: none;
+}
+a:hover {
+  color: #0C4376;
+  text-decoration: underline;
+}
