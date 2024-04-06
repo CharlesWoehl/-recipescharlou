@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   resources :categories, param: :id do
     get ':name', action: :show, on: :member
   end
-  resources :recipes, param: :name
-  get '/random', to: 'recipes#random'
+  resources :recipes, param: :id do
+    get ':name', action: :show, on: :member
+  end
+   get '/random', to: 'recipes#random'
 
   get "up" => "rails/health#show", as: :rails_health_check
 
