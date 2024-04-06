@@ -21,6 +21,10 @@ Trestle.resource(:recipes) do
       <p><strong>00 MIN | FACILE | PERS 0 | 000&deg;c</strong></p>
       <p>Petit texte d'introduction, si besoin</p>
       <p>&nbsp;</p>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">Gauche ingredients</div>
+        <div class="col-lg-6 col-sm-12">Droite ingredients</div>
+      </div>
       <h2 class="wp-block-heading">INGREDIENTS</h2>
       <p>ligne 1<br />ligne 2<br /></p>
       <div class="wp-block-spacer" aria-hidden="true">&nbsp;</div>
