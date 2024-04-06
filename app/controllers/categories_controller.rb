@@ -4,7 +4,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
-    @recipes = @category.recipes.order(:name)
+    id, _ = params[:id].split('-')
+    @category = Category.find(id)
+    @recipes = @category.recipes.order(:name) if @category
   end
 end
