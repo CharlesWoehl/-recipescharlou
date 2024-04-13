@@ -6,10 +6,13 @@
         <%= link_to category_path(cat) do %>
           <div class="pic-card-category">
             <% if cat.photo.present? %>
-               <%= cl_image_tag cat.photo.key, class: "card-img-top", :transformation => [
-                  {:width => 300, :height => 200, :crop => "fill", :quality => "auto"}
-                ] %>
-            <% else %>
+<%= cl_image_tag(cat.photo.present? ? cat.photo.key : "landmannalaugar_iceland.jpg",
+                 :transformation => [
+                    {:width => 1000, :crop => "scale"},
+                    {:quality => "auto"},
+                    {:fetch_format => :auto}
+                 ],
+                 class: "card-img-top") %>            <% else %>
               <img src="https://library.elementor.com/food-blog-flexbox/wp-content/uploads/sites/232/2022/02/how2_Post_ft_image3.jpg" class="card-img-top" alt="...">
             <% end %>
           </div>

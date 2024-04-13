@@ -2,15 +2,17 @@
   <% @recipes.each do |recipe| %>
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4 title-category-list mt-3">
       <%= link_to recipe_path(recipe) do %>
-     <div class="photo-category-recipe">
-  <% if recipe.photo.present? %>
-  <%= cl_image_tag(recipe.photo.key, class: "card-img-top", :transformation => [
-          {:width => 1000, :crop => "scale"},
-          {:quality => "auto"},
-          {:fetch_format => :auto}
-        ]) %>
-  <% end %>
-</div>
+      <div class="photo-category-recipe">
+      <% if recipe.photo.present? %>
+<%= cl_image_tag(recipe.photo.present? ? recipe.photo.key : "landmannalaugar_iceland.jpg",
+                 :transformation => [
+                    {:width => 1000, :crop => "scale"},
+                    {:quality => "auto"},
+                    {:fetch_format => :auto}
+                 ],
+                 class: "card-img-top") %>      <% end %>
+      </div>
+      <% end %>
       <div class="details-category-recipe p-4">
         <div class="title-category-recipe"><%= recipe.name %></div>
         <div class="description-card-category"><%= recipe.description %></div>
