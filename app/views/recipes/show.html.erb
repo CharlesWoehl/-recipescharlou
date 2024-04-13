@@ -1,4 +1,3 @@
-<%= render 'shared/breadcrumb' %>
 
 <div class="container-fluid">
   <div class="row">
@@ -9,18 +8,23 @@
 
 </p>
     </div>
-    <div class="col-lg-5 col-sm-12 p-0">
-      <div class="photo-show-recipe">
-        <% if @recipe.photo.present? %>
-        <%= cl_image_tag @recipe.photo.key %>
-        <% end %>
-      </div>
-    </div>
+   <div class="col-lg-5 col-sm-12 p-0">
+  <div class="photo-show-recipe">
+    <% if @recipe.photo.present? %>
+      <%= cl_image_tag(@recipe.photo.key, :transformation => [
+          {:width => 1000, :crop => "scale"},
+          {:quality => "auto"},
+          {:fetch_format => :auto}
+        ]) %>
+    <% end %>
+  </div>
+</div>
       <div class="recipe-show-recipe p-4">
         <%= @recipe.recipe.html_safe %>
       </div>
   </div>
 </div>
+<%= render 'shared/breadcrumb' %>
 <%# previous & next %>
 <!--
 <% if @previous_recipe || @next_recipe %>
