@@ -1,6 +1,6 @@
 <% if @breadcrumbs.any? %>
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+     <ol class="breadcrumb">
       <% @breadcrumbs.each_with_index do |crumb, index| %>
         <% if index == @breadcrumbs.size - 1 %>
           <li class="breadcrumb-item active" aria-current="page"><%= crumb[:title] %></li>
@@ -9,5 +9,23 @@
         <% end %>
       <% end %>
     </ol>
-  </nav>
+
+   </nav>
 <% end %>
+<%# previous & next %>
+<!--
+<% if @previous_recipe || @next_recipe %>
+  <div class="next-prev-container">
+    <div class="col-6 d-flex justify-content-start align-items-center ps-5">
+      <% if @previous_recipe %>
+        <%= link_to "<< Recette précédente", recipe_path(@previous_recipe), class: "link-read-more" %>
+      <% end %>
+    </div>
+    <div class="col-6 d-flex justify-content-end align-items-center pe-5">
+      <% if @next_recipe %>
+        <%= link_to "Recette suivante >>", recipe_path(@next_recipe), class: "link-read-more" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+-->

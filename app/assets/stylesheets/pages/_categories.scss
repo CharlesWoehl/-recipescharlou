@@ -147,7 +147,21 @@
   white-space: nowrap; /* Empêche le texte de passer à la ligne */
   text-overflow: ellipsis; /* Ajoute des points de suspension (...) si le texte dépasse */
 }
-
+.title-category-recipe-index {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #1e1e1e;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+  overflow: hidden; /* Cache le texte qui dépasse */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  text-overflow: ellipsis; /* Ajoute des points de suspension (...) si le texte dépasse */
+}
 .link-read-more a {
   font-family: "Quicksand", sans-serif;
   font-style: normal;

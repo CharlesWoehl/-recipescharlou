@@ -10,7 +10,7 @@
         <%= link_to "Catégories", categories_path, class: ('nav-link' + (current_page?(categories_path) ? ' active' : '')) %>
       </li>
       <li class="nav-item">
-        <%= link_to "Index", index_path, class: ('nav-link' + (current_page?(index_path) ? ' active' : '')) %>
+        <%= link_to "Index", index_path(section: 'abc'), class: ('nav-link' + (current_page?(index_path) ? ' active' : '')) %>
       </li>
       <li class="nav-item">
         <%= link_to "Inspire moi !", '/random', class: ('nav-link') %>

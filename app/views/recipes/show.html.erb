@@ -24,22 +24,4 @@
       </div>
   </div>
 </div>
-<%# previous & next %>
-<!--
-<% if @previous_recipe || @next_recipe %>
-  <div class="next-prev-container">
-    <div class="col-6 d-flex justify-content-start align-items-center ps-5">
-      <% if @previous_recipe %>
-        <%= link_to "<< Recette précédente", recipe_path(@previous_recipe), class: "link-read-more" %>
-      <% end %>
-    </div>
-    <div class="col-6 d-flex justify-content-end align-items-center pe-5">
-      <% if @next_recipe %>
-        <%= link_to "Recette suivante >>", recipe_path(@next_recipe), class: "link-read-more" %>
-      <% end %>
-    </div>
-  </div>
-<% end %>
--->
-
-        <%= render 'shared/breadcrumb' %>
+<%= render 'shared/breadcrumb' %>
