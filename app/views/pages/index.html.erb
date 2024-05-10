@@ -24,7 +24,13 @@
             </div>
             <% end %>
             <div class="details-category-recipe p-1">
-              <div class="title-category-recipe-index"><%= recipe.name %></div>
+              <div class="title-category-recipe-index">
+                <% if recipe.photo.present? %>
+                  <%= recipe.name %>
+                <% else %>
+                  <%= link_to recipe.name, recipe_path(recipe) %>
+                <% end %>
+                </div>
              </div>
           </div>
         <% end %>
