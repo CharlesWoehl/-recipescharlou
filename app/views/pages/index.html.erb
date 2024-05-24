@@ -14,14 +14,14 @@
             <%= link_to recipe_path(recipe) do %>
             <div class="photo-category-recipe">
             <% if recipe.photo.present? %>
-      <%= cl_image_tag(  recipe.photo.present? ? recipe.photo.key : "https://images.pexels.com/photos/6287251/pexels-photo-6287251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      <%= cl_image_tag(  recipe.photo.present?,
 
                       :transformation => [
                           {:width => 1000, :crop => "scale"},
                           {:quality => "auto"},
                           {:fetch_format => :auto}
                       ],
-                      class: "card-img-top") %>      <% end %>
+                      class: "card-img-top") %>   <p>no</p>   <% end %>
             </div>
             <% end %>
             <div class="details-category-recipe p-1">
