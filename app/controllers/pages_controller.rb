@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     else
       @recipes_by_letter = Recipe.all.group_by { |recipe| recipe.name[0].upcase }
       .sort_by { |letter, _recipes| letter }
+      @recipes = Recipe.all.order("name ASC")
     end
 
   end
