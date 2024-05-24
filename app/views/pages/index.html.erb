@@ -14,7 +14,8 @@
             <%= link_to recipe_path(recipe) do %>
             <div class="photo-category-recipe">
             <% if recipe.photo.present? %>
-      <%= cl_image_tag(recipe.photo.present? ? recipe.photo.key : "landmannalaugar_iceland.jpg",
+      <%= cl_image_tag(  recipe.photo.present? ? recipe.photo.key : "https://images.pexels.com/photos/6287251/pexels-photo-6287251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+
                       :transformation => [
                           {:width => 1000, :crop => "scale"},
                           {:quality => "auto"},
