@@ -93,3 +93,14 @@ nav {
       color: #333;
     }
 }
+.search-none{
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .iphone-padding {
+    padding: 0 !important;
+  }
+  .search-none{
+    display: block;
+  }
+}
